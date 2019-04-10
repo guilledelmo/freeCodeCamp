@@ -4,7 +4,7 @@ title: Creating GUI's in Python 3
 
 ## Popular ways for developing GUI's in Python 3
 
-Python provides various interfaces for creating Graphical User Interfaces(GUI' s). Some of them popular ways are as under:
+Python provides various interfaces for creating Graphical User Interfaces (GUIs). Several popular tools are listed below:
 
 **1. Tkinter**
 
@@ -36,3 +36,21 @@ The older PyGtk bindings for the Gtk+ 2 toolkit have been implemented by James H
  * [Qt]( https://www.qt.io/qt-for-python)
  * [Gtk+](http://www.pygtk.org)
 
+
+### A simple GUI with Tkinter
+Let's look at an example of a GUI using Tkinter. Since tkinter is already included in the Python Standard Library, you do not need to install anything to get started.
+The first thing we will do is create an empty window with a title:
+```py
+import tkinter as tk
+
+win = tk.Tk()
+win.title("Simple window with Tkinter")
+
+win.mainloop()
+```
+In the first line, we imported tkinter as tk to make it easier for us to use later in the code and be able to able to refer to it as `tk`.
+After that, we created a window. In Tkinter you must create a window and put it in a variable. This is useful for applications that change their main content frequently or for pop-ups. You create a window with the method `Tk()`.
+The next line defines the title of the GUI window and in the last line the `mainloop()` method is called, which allows the Tkinter window to render and show in the user's screen.
+
+### Adding labels
+In order to add some text to our window, we must use labels.
